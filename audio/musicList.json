@@ -1,0 +1,101 @@
+[
+	{
+		"name":"泡沫",
+		"singer":"邓紫棋",
+		"album":"泡沫",
+		"link_url":"/audio/泡沫/G.E.M. 邓紫棋 - 泡沫 [mqms2].mp3",
+		"cover":"/audio/泡沫/cover.jpg",
+		"link_lrc":"/audio/泡沫/G.E.M. 邓紫棋 - 泡沫 [mqms2].lrc",
+		"time":"04:18"
+	},
+	{
+		"name":"Day By Day",
+		"singer":"T-ara",
+		"album":"Day By Day",
+		"link_url":"/audio/DaybyDay/T-ara (티아라) - DAY BY DAY [mqms2].flac",
+		"cover":"/audio/DaybyDay/cover.jpg",
+		"link_lrc":"/audio/DaybyDay/T-ara (티아라) - DAY BY DAY [mqms2].lrc",
+		"time":"03:29"
+	},
+	{
+		"name":"Faded",
+		"singer":"Alan Walker",
+		"album":"Faded",
+		"link_url":"/audio/Faded/Alan WalkerIselin Solheim - Faded [mqms2].mp3",
+		"cover":"/audio/Faded/cover.jpg",
+		"link_lrc":"/audio/Faded/Alan Walker - Faded (Instrumental) [mqms2].lrc",
+		"time":"03:33"
+	},
+	{
+		"name":"一亿个伤心",
+		"singer":"蒙面哥",
+		"album":"一亿个伤心",
+		"link_url":"/audio/一亿个伤心/蒙面哥 - 一亿个伤心 [mqms2].mp3",
+		"cover":"/audio/一亿个伤心/cover.jpg",
+		"link_lrc":"/audio/一亿个伤心/蒙面哥 - 一亿个伤心 [mqms2].lrc",
+		"time":"04:24"
+	},
+	{
+		"name":"他不懂",
+		"singer":"张杰",
+		"album":"因你而在",
+		"link_url":"/audio/他不懂/张杰 - 他不懂 [mqms2].mp3",
+		"cover":"/audio/他不懂/cover.jpg",
+		"link_lrc":"/audio/他不懂/张杰 - 他不懂 [mqms2].lrc",
+		"time":"03:52"
+	},
+	{
+		"name":"修炼爱情",
+		"singer":"林俊杰",
+		"album":"修炼爱情",
+		"link_url":"/audio/修炼爱情/林俊杰 - 修炼爱情 [mqms2].mp3",
+		"cover":"/audio/修炼爱情/cover.jpg",
+		"link_lrc":"/audio/修炼爱情/林俊杰 - 修炼爱情 [mqms2].lrc",
+		"time":"04:47"
+	},
+	{
+		"name":"全世界谁倾听你",
+		"singer":"林宥嘉",
+		"album":"全世界谁倾听你",
+		"link_url":"/audio/全世界谁倾听你/林宥嘉 - 全世界谁倾听你 [mqms2].mp3",
+		"cover":"/audio/全世界谁倾听你/cover.jpg",
+		"link_lrc":"/audio/全世界谁倾听你/林宥嘉 - 全世界谁倾听你 [mqms2].lrc",
+		"time":"04:19"
+	},
+	{
+		"name":"凉凉",
+		"singer":"杨宗纬/张碧晨",
+		"album":"凉凉",
+		"link_url":"/audio/凉凉/杨宗纬张碧晨 - 凉凉 [mqms2].mp3",
+		"cover":"/audio/凉凉/cover.jpg",
+		"link_lrc":"/audio/凉凉/杨宗纬张碧晨 - 凉凉 [mqms2].lrc",
+		"time":"05:33"
+	},
+	{
+		"name":"刚刚好",
+		"singer":"薛之谦",
+		"album":"刚刚好",
+		"link_url":"/audio/刚刚好/薛之谦 - 刚刚好 [mqms2].mp3",
+		"cover":"/audio/刚刚好/cover.jpg",
+		"link_lrc":"/audio/刚刚好/薛之谦 - 刚刚好 [mqms2].lrc",
+		"time":"04:10"
+	},
+	{
+		"name":"当你",
+		"singer":"林俊杰",
+		"album":"当你",
+		"link_url":"/audio/当你/林俊杰 - 当你 [mqms2].mp3",
+		"cover":"/audio/当你/cover.jpg",
+		"link_lrc":"/audio/当你/林俊杰 - 当你 [mqms2].lrc",
+		"time":"04:09"
+	},
+	{
+		"name":"需要人陪",
+		"singer":"王力宏",
+		"album":"十八般武艺",
+		"link_url":"/audio/需要人陪/王力宏 - 需要人陪 [mqms2].mp3",
+		"cover":"/audio/需要人陪/cover.jpg",
+		"link_lrc":"/audio/需要人陪/王力宏 - 需要人陪 [mqms2].lrc",
+		"time":"04:11"
+	}
+]
