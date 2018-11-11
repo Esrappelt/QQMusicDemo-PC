@@ -1,0 +1,824 @@
+* {
+    color: #BBB6B6;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+body {
+    /*position: relative;*/
+}
+
+a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, .8) !important;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+
+.mask_bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    background: url("../audio/一亿个伤心/cover.jpg") no-repeat 0 0;
+    background-size: cover;
+    filter: blur(65px);
+    overflow: hidden;
+    transform: translateZ(0);
+}
+
+.mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0, 0.35);
+    color: rgb(51, 51, 51);
+}
+
+.login {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.MusicAll {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 550px;
+}
+.music {
+    width: 100%;
+    height: 550px;
+    /*display: none;*/
+}
+
+.play {
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    user-select: none;
+    z-index: 999999;
+}
+
+.login .logo {
+    float: left;
+    height: 60px;
+    width: 100px;
+    line-height: 60px;
+    margin-left: 20px;
+}
+
+.login .logo img {
+    width: 78px;
+    height: 21px;
+    opacity: 0.3;
+    margin: 0 auto;
+}
+
+.login .logo img:hover {
+    transition: opacity 0.5s;
+    opacity: 1;
+}
+
+.login .register {
+    float: right;
+    height: 60px;
+    margin-right: 50px;
+}
+
+.login .register ul {
+    height: 60px;
+    line-height: 60px;
+}
+
+.login .register ul li {
+    float: left;
+    opacity: 0.5;
+    margin-right: 20px;
+}
+
+.login .register ul li:hover {
+    opacity: 1;
+    color: #fff;
+    transition: opacity 0.5s;
+}
+
+.music .music_left {
+    width: 750px;
+    height: 100%;
+    float: left;
+    margin-left: 100px;
+}
+
+.music .music_lyric {
+    width: 495px;
+    height: 100%;
+    float: left;
+    display: block;
+}
+
+.music_left .fav {
+    width: 700px;
+    height: 40px;
+    text-align: center;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.music_left .fav li {
+    width: 122px;
+    height: 38px;
+    line-height: 38px;
+    display: block;
+    padding: 0 23px;
+    float: left;
+    border: 1px solid rgba(255, 255, 255, .3);
+    margin-right: 6px;
+    white-space: nowrap;
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+
+.music_left .fav li i {
+    opacity: .6;
+    display: inline-block;
+    background: url("../images/icon_sprite.png") no-repeat 0 0;
+    width: 16px;
+    height: 16px;
+
+}
+
+.fav li:nth-child(1) i {
+    background-position: -60px -20px;
+    vertical-align: -4px;
+}
+
+.fav li:nth-child(2) i {
+    background-position: -20px -20px;
+    vertical-align: -3px;
+}
+
+.fav li:nth-child(3) i {
+    background-position: -40px -240px;
+    vertical-align: -3px;
+}
+
+.fav li:nth-child(4) i {
+    background-position: -100px -20px;
+    vertical-align: -3px;
+}
+
+.fav li:nth-child(5) i {
+    background-position: -40px -300px;
+    vertical-align: -3px;
+}
+
+.music_left .fav li:hover i {
+    opacity: 1;
+}
+
+.music_left .fav li:hover {
+    border-color: white;
+    color: white;
+}
+
+
+
+
+
+
+.songlist {
+    width: 100%;
+    height: 400px;
+    overflow: auto;
+}
+
+.songlist li {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.01);
+    box-sizing: border-box;
+    user-select: none;
+    position: relative;
+}
+
+.songlist li div {
+    float: left;
+    line-height: 50px;
+    height: 100%;
+}
+
+.songlist .box {
+    width: 50px;
+    text-align: center;
+}
+
+
+.songlist input[type='checkbox'] {
+    width: 14px;
+    height: 14px;
+    -webkit-appearance: none;
+    border: 1px solid rgba(255, 255, 255, .3);
+    outline: none;
+    line-height: 50px;
+    display: inline-block;
+    margin-left: -35px;
+}
+
+.songlist input[type='checkbox']:hover {
+    border-color: white;
+}
+
+.songChecked {
+    background: url("../images/icon_sprite.png") no-repeat -61px -81px;
+    border-color: white !important;
+}
+
+.songlist .number {
+    width: 20px;
+}
+
+.songlist .number .songWave {
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    margin-top: -5px;
+    background: url("../images/wave.gif") no-repeat 0px center;
+    white-space: nowrap;
+    overflow: hidden;
+    color: transparent;
+    width: 10px;
+    height: 10px;
+}
+
+.songlist .name {
+    width: 50%;
+}
+
+.songlist .name .menu {
+    display: none;
+    float: right;
+    margin-right: 12px;
+    line-height: 50px;
+}
+
+.songlist .name .menu a {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    margin-right: 5px;
+}
+
+.menu i {
+    margin-top: 8px;
+    display: block;
+    font-size: 0;
+    width: 36px;
+    height: 36px;
+    line-height: 50px;
+    cursor: pointer;
+    background: url("../images/icon_list_menu.png") no-repeat 0 0;
+}
+
+
+.menu a:nth-child(1) i {
+    background-position: -80px 0;
+}
+
+.menu a:nth-child(2) i {
+    background-position: -80px -80px;
+}
+
+.menu a:nth-child(3) i {
+    background-position: -80px -40px;
+}
+
+
+.menu a:nth-child(1) i:hover {
+    background-position: -120px 0;
+}
+
+.menu a:nth-child(2) i:hover {
+    background-position: -120px -80px;
+}
+
+.menu a:nth-child(3) i:hover {
+    background-position: -120px -40px;
+}
+
+.menu .menu_play2 {
+    background-position: -120px -200px !important;
+}
+
+
+
+.songlist .singer {
+    width: 20%;
+}
+
+/*.songlist .singer2 a:hover {
+	color: white;
+}*/
+.songlist .time {
+    width: 10%;
+    text-align: center;
+}
+
+.songlist .time a {
+    display: none;
+    height: 36px;
+    width: 36px;
+    line-height: 50px;
+    position: relative;
+}
+
+.songlist .time a i {
+    height: 36px;
+    width: 36px;
+    display: block;
+    background: url("../images/icon_list_menu.png") no-repeat 0 0;
+    background-position: -80px -160px;
+    position: absolute;
+    top: 7px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.songlist .time a i:hover {
+    background-position: -120px -160px;
+}
+
+.music_lyric .album {
+    width: 100%;
+    height: 320px;
+    text-align: center;
+}
+
+.music_lyric .album .pic_name {
+    display: inline-block;
+    width: 201px;
+    height: 180px;
+    background: url("../images/album_cover_player.png") no-repeat 0 0;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.music_lyric .album .pic_name img {
+    width: 186px;
+    height: 186px;
+    display: block;
+    position: absolute;
+    left: -9px;
+    top: 0;
+}
+
+.music_lyric .album .song_name,
+.music_lyric .album .singer2,
+.music_lyric .album .album_name {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.music_lyric .album .song_name a:hover,
+.music_lyric .album .singer2 a:hover,
+.music_lyric .album .album_name a:hover {
+    opacity: 1;
+    color: white;
+}
+
+
+
+.music_lyric .lyricwrapper::-webkit-scrollbar {
+    /*隐藏滚轮*/
+    display: none;
+}
+/*固定*/
+.music_lyric .lyricwrapper {
+    width: 70%;
+    line-height: 35px;
+    cursor: pointer;
+    margin: 0 auto;
+    height: 50px;
+    overflow: auto;
+}
+/*滚动*/
+.music_lyric .lyrics {
+    text-align: center;
+}
+
+.music_lyric .lyrics li{
+    line-height: 20px;
+    font-weight: bold;
+}
+
+.music_lyric .lyrics .cur {
+    color: green;
+}
+
+
+.play .play1,
+.play .play2,
+.play .play3,
+.play .play4,
+.play .play5,
+.play .play6,
+.play .play7,
+.play .play8,
+.play .play9,.play4_1,.play4_2,.play4_3{
+    display: inline-block;
+    background: url("../images/player.png") no-repeat 0 0;
+}
+.play {
+    cursor: pointer;
+}
+
+.play .play1 {
+    width: 19px;
+    height: 20px;
+    background-position: 0px -30px;
+    margin-right: 50px;
+}
+
+.play .play2 {
+    width: 21px;
+    height: 29px;
+    background-position: 0px 0px;
+    margin-right: 50px;
+    vertical-align: -6px;
+}
+
+.play .play3 {
+    width: 19px;
+    height: 20px;
+    background-position: 0px -52px;
+}
+
+/*右边*/
+
+.play .play4_1{
+     /*这个是顺序播放*/
+    width: 21px;
+    height: 20px;
+    margin-left: 25px;
+    background-position: 0 -260px;
+}
+.play .play4_2{
+     /*这个是随机播放*/
+     width: 26px;
+     height: 20px;
+     margin-left: 20px;
+    background-position: 0 -74px;
+}
+.play .play4_3{
+    /*单曲循环*/
+    width: 26px;
+    height: 25px;
+    background-position: 0 -232px;
+    margin-left: 20px;
+}
+.play .play4 {
+    width: 26px;
+    height: 25px;
+    background-position: 0px -205px;
+    margin-left: 20px;
+}
+.play .play5 {
+    width: 23px;
+    height: 21px;
+    margin-left: 20px;
+    background-position: -30px -96px;
+}
+
+.play .play6 {
+    width: 21px;
+    height: 21px;
+    margin-left: 20px;
+    background-position: 0px -120px;
+}
+
+.play .play7 {
+    width: 23px;
+    height: 24px;
+    margin-left: 20px;
+    vertical-align: -3px;
+    background-position: 0px -430px;
+    position: relative;
+}
+
+.play .play8 {
+    width: 74px;
+    height: 26px;
+    margin-left: 20px;
+    vertical-align: -5px;
+    background-position: 0px -282px;
+}
+
+.play .play8_1 {
+    width: 74px;
+    height: 26px;
+    margin-left: 20px;
+    vertical-align: -5px;
+    display: inline-block;
+    background: url('/images/player.png') no-repeat 0 -311px;
+}
+
+.play .play9 {
+    width: 24px;
+    height: 20px;
+    margin-left: 15px;
+    background-position: 0px -144px;
+}
+.play .play9_2{
+    width: 26px;
+    background-position: 0px -182px;
+}
+
+.play .play_left {
+    margin-left: 100px;
+    width: 200px;
+    float: left;
+}
+
+.play .play_mid {
+    float: left;
+    height: 20px;
+    width: 545px;
+    position: relative;
+}
+.play .play_mid .play_mid_top {
+    height: 20px;
+}
+.play .play_mid .play_mid_top_s {
+    height: 20px;
+    width: 100%;
+}
+
+.play .playing {
+    background-position: -30px -2px;
+}
+
+
+
+.play .play_mid .play_mid_top_s .play_mid_top_s_left {
+    float: left;
+}
+
+.play .play_mid .play_mid_top_s .play_mid_top_s_right {
+    float: right;
+}
+
+
+.play .play_mid .play_mid_top_bar {
+	width: 100%;
+	height: 2px;
+	background: rgb(255,255,255,0.5);
+	margin-top: 5px;
+    position: relative;
+}
+.play .play_mid .play_mid_top_bar .play_mid_top_line {
+	height: 2px;
+	width:0;
+	background: rgb(255,255,255,1);
+}
+.play .play_mid .play_mid_top_bar .play_mid_top_line .play_mid_top_dot {
+	position: absolute;
+	top: -4px;/*因为10-2 = 8  8/2 = 4*/
+	left: 0;
+	height: 10px;
+	width: 10px;
+	border-radius: 50%;
+	background: white;
+}
+
+.play .wrapper {
+    height: 14px;
+    width: 100%;
+    float: left;
+}
+
+
+.play .play_right {
+    float: left;
+}
+
+.play .play_right .voice {
+    display: inline-block;
+    position: relative;
+    width: 150px;
+    height: 20px;
+}
+
+.play .play_right .comment_num {
+    position: absolute;
+    top: -7px;
+    right: 7px;
+    width: 10px;
+    height: 10px;
+    color: white;
+    font-size: 12px;
+}
+
+.play .play_right .voicewrapper {
+    width: 80px;
+    height: 6px;
+    position: absolute;
+    left: 50px;
+    top: 7px;
+}
+.play .play_right .play_voice_bar {
+	position: absolute;
+    left: 0;
+    top: 2px;
+	width: 80px;
+	height: 2px;
+	background: rgb(255,255,255,.3);
+}
+.play .play_right .play_voice_bar .play_voice_line {
+	height: 100%;
+	width: 100%;
+	background:white;
+}
+.play .play_right .play_voice_bar .play_voice_line .play_voice_dot {
+	height: 10px;
+	width: 10px;
+	border-radius: 50%;
+	background: white;
+	position: absolute;
+	left: 100%;
+	top: -4px;
+}
+.selectTip {
+    position: absolute;
+    z-index: 9999;
+    left: 50%;
+    top: 50%;
+    width: 200px;
+    height: 130px;
+    transform: translate(-50%,-50%);
+    background: rgba(0,0,0,.7);
+    display: none;
+}
+.tipBg {
+    position: absolute;
+    background: url('/images/icon_popup.png') no-repeat 0 -219px;
+    width: 47px;
+    height: 48px;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%,-40%);
+}
+.selectTip h2 {
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    width: 100%;
+    transform: translate(-50%,10%);
+    text-align: center;
+}
+.delTip {
+    width: 520px;
+    height: auto;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background: white;
+
+}
+.delTip .topDel {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 16px;
+    color: #333;
+    border-bottom: 1px solid #f2f2f2;
+    position: relative;
+}
+.delTip .topDel i {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: block;
+    background: url('/images/icon_popup.png') no-repeat 0 -200px;
+    width: 11px;
+    height: 11px;
+}
+.delTip .topDel i:hover {
+    background-position: -13px -200px;  
+    width: 12px;
+    height: 11px;
+}
+.delTip .middleDel {
+    height: 100px;
+    width: 100%;
+    position: relative;
+    padding-bottom: 30px;
+}
+.delTip .bottomDel {
+    height: 50px;
+    width: 300px;
+    float: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bottomDel .yesDel,.bottomDel .noDel {
+    background: #31C27C;
+    width: 122px;
+    height: 38px;
+    text-align: center;
+    line-height: 38px;
+    border: 1px solid rgb(201, 201, 201);
+    cursor: pointer;
+    color: white;
+    border-radius: 2px;
+}
+.bottomDel .noDel {
+    background: white;
+    color: black;
+}
+.bottomDel .noDel:hover {
+    background: #EDEDED;    
+}
+.bottomDel .yesDel:hover {
+    background: #2CAF6F;
+}
+.middleDel i {
+    position: absolute;
+    background: url('/images/icon_popup.png') no-repeat 0 0;
+    width: 48px;
+    height: 48px;
+    top: 50%;
+    left: 5%;
+    transform: translate(-5%,-50%);
+}
+
+.middleDel h2 {
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translate(50px,-50%);
+    color: #333;
+    font-weight: 400;
+}
+
+.delTipSet {
+    width: 100%;
+    height: 100%;
+    z-index: 99999999;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.pureMode::-webkit-scrollbar {
+    display: none;
+}
+
+.MusicAll .pureMode {
+    width: 100%;
+    height: 270px;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    text-align: center;
+    overflow: auto;
+    display: none;
+}
+
+.pureModeBar {
+    text-align: center;
+}
+.pureModeBar li {
+    font-size: 22px;
+    height: 58px;
+    line-height: 116px;
+}
+.cur {
+    color: green!important;
+}
+
+
