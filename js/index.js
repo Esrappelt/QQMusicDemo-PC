@@ -223,6 +223,11 @@ $(function() {
 		});
 
 		var $play2 = $(".play .play2");
+
+		$(".songlist").on('dblclick', '.list_song', function(event) {
+			event.preventDefault();
+			$(this).find('.menu_play').trigger('click');
+		});
 		$(".songlist").on('click', '.menu_play', function(event) {
 			event.preventDefault();
 			//找到当前所在的li元素
@@ -276,6 +281,15 @@ $(function() {
 			initLyricInfo($playMusic);
 			
 		});
+
+		//监听用户是否按下了空格键
+		document.onkeydown = function (event){
+			//如果用户按键是空格键
+			if(event.keyCode === 32) {
+				//触发播放或暂停按钮
+				$("li.list_song").eq(player.currentPlay()).find('.menu_play').trigger('click');
+			}
+		}
 		//3.底部控制播放
 		$play2.on('click', function(event) {
 			event.preventDefault();
