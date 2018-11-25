@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>QQ音乐</title>
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="//at.alicdn.com/t/font_883223_evibxartv9l.css">
+	<script type="text/javascript" src="/js/jquery.js"></script>
+	<link rel="stylesheet" href="/css/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" href="/css/index.css">
+	<script type="text/javascript" src="/js/jquery.mCustomScrollbar.min.js"></script>
+	<script type="text/javascript" src="/js/player.js"></script>
+	<script type="text/javascript" src="/js/progress.js"></script>
+	<script type="text/javascript" src="/js/lyric.js"></script>
+	<script type="text/javascript" src="/js/index.js"></script>
+</head>
+<body>
+	
+	<div class="mask_bg"></div>
+	<div class="mask"></div>
+
+	<div class="login">
+		<div class="logo">
+			<a href="#none">
+				<img src="/images/player_logo.png" alt="QQ音乐">
+			</a>
+		</div>
+		<div class="register">
+			<ul>
+				<li>登录</li>
+				<li>注册</li>
+			</ul>
+		</div>
+	</div>
+	<div class="MusicAll">
+		<div class="pureMode">
+			<ul class="pureModeBar"></ul>
+		</div>
+		<div class="music">
+			<div class="music_left">
+			<div class="fav">
+				<ul>
+					<li>
+						<i></i>
+						<a href="javascript:;">收藏</a>
+					</li>
+					<li>
+						<i></i>
+						<a href="javascript:;">添加到</a>
+						</li>
+					<li id="selectDownload">
+						<i></i>
+						<a href="javascript:;">下载</a>
+					</li>
+					<li>
+						<i></i>
+						<a href="javascript:;">删除</a></li>
+					<li id="delAllMusic">
+						<i></i>
+						<a href="javascript:;">清除列表</a>
+					</li>
+				</ul>
+			</div>
+			<div class="songlist" data-mcs-theme="minimal-dark">
+				<ul>
+					<li class="list_title">
+						<div class="box">
+							<label class="checkBox">
+								<input type="checkbox">
+							</label>
+						</div>
+						<div class="number">
+						</div>
+						<div class="name" title="歌曲">歌曲</div>
+						<div class="singer" title="歌手">歌手</div>
+						<div class="time" title="时长">时长</div>
+					</li>
+				</ul>
+			</div>
+			</div>
+			<div class="music_lyric">
+				<div class="album">
+					<a href="javascript:;" class="pic_name">
+						<img src="" alt="">
+					</a>
+					<div class="song_name">
+						<span>歌曲名：</span>	
+						<a href="javascript:;"></a>
+					</div>
+					<div class="singer2">
+						<span>歌手名：</span>
+						<a href="javascript:;"></a>
+					</div>
+					<div class="album_name">
+						<span>专辑名：</span>
+						<a href="javascript:;"></a>
+					</div>
+				</div>
+			<div class="lyricwrapper">
+				<ul class="lyrics"></ul>
+			</div>
+			</div>
+		</div>
+	</div>
+	
+
+	<div class="play">
+		<div class="play_left">
+			<a href="javascript:;" class="play1"></a>
+			<a href="javascript:;" class="play2"></a>
+			<a href="javascript:;" class="play3"></a>
+		</div>
+		<div class="play_mid">
+			<div class="play_mid_top">
+				<div class="play_mid_top_s">
+					<div class="play_mid_top_s_left">
+						<a href="javascript:;"></a>
+					</div>
+					<div class="play_mid_top_s_right"></div>
+				</div>
+				<div class="wrapper">
+					<div class="play_mid_top_bar">
+						<div class="play_mid_top_line">
+							<div class="play_mid_top_dot"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="play_right">
+			<a href="javascript:;" class="play4"></a>
+			<a href="javascript:;" class="play5"></a>
+			<a href="" class="play6" download="" target="none"></a>
+			<a href="javascript:;" class="play7">
+				<span class="comment_num">999+</span>
+			</a>
+			<a href="javascript:;" class="play8"></a>
+			<div class="voice">
+				<a href="javascript:;" class="play9"></a>
+				<div class="voicewrapper">
+					<div class="play_voice_bar">
+						<div class="play_voice_line">
+							<div class="play_voice_dot"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="selectTip">
+		<h2>请选择操作的单曲</h2>
+		<i class="tipBg"></i>
+	</div>
+	<div class="delTipSet">
+		<div class="delTip">
+			<div class="topDel">
+				<i></i>QQ音乐
+			</div>
+			<div class="middleDel">
+				<i></i>
+				<h2>确定要清空列表？</h2>
+			</div>
+			<div class="bottomDel">
+				<div class="yesDel" >确定</div>
+				<div class="noDel" >取消</div>
+			</div>
+		</div>
+	</div>
+	<audio src=""></audio>
+</body>
+</html>
+
