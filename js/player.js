@@ -95,7 +95,7 @@
 				console.log("start="+ musicBuffered.start(0));
 				console.log("end=" + musicBuffered.end(0));
 				var duration = that.getMusicDuration();
-				console.log('进度=' + musicLength * 100/that.audio.duration + "%");
+				console.log('进度=' + musicBuffered.end(0)/that.audio.duration * 100 + "%");
 				var currentTime = that.getMusicCurrentTime();
 				var timeStr = that.formatDate(duration,currentTime);
 				callback(duration,currentTime,timeStr);//这就是回调函数
