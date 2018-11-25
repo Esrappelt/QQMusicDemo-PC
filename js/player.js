@@ -88,7 +88,8 @@
 			that.$audio.on('timeupdate', function(event) {
 				event.preventDefault();
 				var musicBuffered = that.audio.buffered;
-				console.log("start="+musicBuffered.start(0));
+				console.log("length=" + musicBuffered.length);
+				console.log("start="+ musicBuffered.start(0));
 				console.log("end=" + musicBuffered.end(0));
 				var duration = that.getMusicDuration();
 				var currentTime = that.getMusicCurrentTime();
