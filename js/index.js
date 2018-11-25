@@ -59,8 +59,8 @@ $(function() {
 	function getPlayerList(){
 		//利用ajax获取本地歌曲或者服务器的歌曲
 		$.ajax({
-			url: '../audio/musicList.json',
-			dataType: 'jsonp'
+			url: 'audio/musicList.json',
+			dataType: 'json'
 		})
 		.done(function(res) {
 			//把数据歌曲赋值给对象player
