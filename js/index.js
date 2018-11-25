@@ -157,6 +157,8 @@ $(function() {
 		//设置背景
 		$musicBg.css("background-image", "url("+ $img_url +")");
 
+		
+		
 		//设置底部控制条歌手和歌名信息
 		$musicBottomInfo.text(music.singer + " - " + music.name);
 

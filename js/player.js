@@ -87,6 +87,9 @@
 			var that = this;//保存一下外部的this
 			that.$audio.on('timeupdate', function(event) {
 				event.preventDefault();
+				var musicBuffered = that.audio.buffered;
+				console.log("start="+musicBuffered.start(0));
+				console.log("end=" + musicBuffered.end(0));
 				var duration = that.getMusicDuration();
 				var currentTime = that.getMusicCurrentTime();
 				var timeStr = that.formatDate(duration,currentTime);
