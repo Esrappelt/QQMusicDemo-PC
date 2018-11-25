@@ -235,8 +235,6 @@ $(function() {
 			//找到当前所在的li元素
 			var $list_song = $(this).parents(".list_song");
 			//在这里我就得到了我创建的时候，对象保存的属性index和el了
-			// console.log($list_song.get(0).index);
-			// console.log($list_song.get(0).el);
 			//切换播放图标
 			$(this).toggleClass('menu_play2');
 
@@ -503,12 +501,9 @@ $(function() {
 		player.musicTimeUpdate(function(duration,currentTime,timeStr){
 			if(currentTime === duration && ( player.currentIndex === player.musicList.length - 1) ) {
 				//这里处理一下暂停图标的切换
-				console.log("以为na");
 				return;
 			}
-			console.log("正在播放");
 			if(currentTime === duration) {
-				console.log("播放下一首");
 				//播放下一首
 				$("li.list_song").eq(player.nextPlay()).find('.menu_play').trigger('click');
 			}

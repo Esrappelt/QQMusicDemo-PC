@@ -5,7 +5,6 @@
 	Lyric.prototype = {
 		constructor:Lyric,
 		init: function(path){
-			console.log(path);
 			this.path = path;
 		},
 		index: -1,
@@ -55,8 +54,6 @@
 				//放入存放时间的数组
 				that.times.push(time);
 			});
-
-			console.log(that.lyrics);
 		},
 		currentIndex: function(currentTime) {
 			var that = this;

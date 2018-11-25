@@ -17,17 +17,15 @@
 				//这个this是$music_bar，不一样的
 				event.preventDefault();	
 				var normalLeft = $(this).offset().left;
-                // console.log(normalLeft);
                 var evenLeft = event.pageX;
-                // console.log(evenLeft);
                 //这里以后优化一下：当我鼠标移过的时候，会超出范围的
                 that.$music_line.css('width', evenLeft - normalLeft);
                 that.$music_dot.css('left', evenLeft - normalLeft);
                 var value = (evenLeft - normalLeft) / that.$music_bar.width();
 				callback(value);
-				console.log("点击的时候的value:" + value);
 			});
 		},
+
 		progressMove: function (callback) {
 			//引用this
 			var that = this;
@@ -43,6 +41,7 @@
 				//鼠标按下去之后才可以移动
 				//2.监听鼠标移动事件
 				that.isMove = true;
+				// that.trottle();
 				$(document).on('mousemove', function(event) {
 					evenLeft = event.pageX;//移动的时候获取值
 					var offset = evenLeft - normalLeft;
@@ -52,7 +51,7 @@
 					}
 				});
 				//3.监听鼠标抬起事件,而且是让整个文档去监听
-				$(document).on('mouseup', function(event) {
+				$(document).mouseup(function(event) {
 					$(document).off("mousemove");//关闭mousemove事件
 					//这里又让进度条继续播放
 					that.isMove = false;
@@ -61,6 +60,8 @@
 					callback(value);
 				});
 			});
+		},
+		setMove: function (){
 			
 		},
 		setProgress: function(value){
@@ -71,6 +72,13 @@
 			//把他换成百分比
 			that.$music_line.css('width', value + "%");
 			that.$music_dot.css('left', value + "%");
+		},
+		trottle:function(method,context) {
+			context = context || window;
+			clearTimeout(method.tId);
+			method.tId = setTimeout(function(){
+				method.call(context);
+			},10);
 		}
 		
 	}
