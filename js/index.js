@@ -60,7 +60,7 @@ $(function() {
 		//利用ajax获取本地歌曲或者服务器的歌曲
 		$.ajax({
 			url: '../audio/musicList.json',
-			dataType: 'json'
+			dataType: 'jsonp'
 		})
 		.done(function(res) {
 			//把数据歌曲赋值给对象player
@@ -200,6 +200,7 @@ $(function() {
 			$(this).find('.menu').stop().fadeOut(100);
 		});
 		
+
 		var $checkboxall = $musicUl.find('li.list_title input[type="checkbox"]');
 		//点击事件
 		$checkboxall.on('click', function(event) {
@@ -223,11 +224,12 @@ $(function() {
 		});
 
 		var $play2 = $(".play .play2");
-
+		
 		$(".songlist").on('dblclick', '.list_song', function(event) {
 			event.preventDefault();
 			$(this).find('.menu_play').trigger('click');
 		});
+
 		$(".songlist").on('click', '.menu_play', function(event) {
 			event.preventDefault();
 			//找到当前所在的li元素
@@ -290,6 +292,7 @@ $(function() {
 				$("li.list_song").eq(player.currentPlay()).find('.menu_play').trigger('click');
 			}
 		}
+
 		//3.底部控制播放
 		$play2.on('click', function(event) {
 			event.preventDefault();
@@ -522,5 +525,6 @@ $(function() {
 			}
 		});
 	}
+
 });
 
