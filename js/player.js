@@ -88,10 +88,14 @@
 			that.$audio.on('timeupdate', function(event) {
 				event.preventDefault();
 				var musicBuffered = that.audio.buffered;
-				console.log("length=" + musicBuffered.length);
+
+				var musicLength = musicBuffered.length;
+
+				console.log("length=" + musicLength);
 				console.log("start="+ musicBuffered.start(0));
 				console.log("end=" + musicBuffered.end(0));
 				var duration = that.getMusicDuration();
+				console.log('进度=' + musicLength * 100/that.audio.duration + "%");
 				var currentTime = that.getMusicCurrentTime();
 				var timeStr = that.formatDate(duration,currentTime);
 				callback(duration,currentTime,timeStr);//这就是回调函数
