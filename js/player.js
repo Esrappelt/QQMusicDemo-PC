@@ -88,17 +88,17 @@
 			that.$audio.on('timeupdate', function(event) {
 				event.preventDefault();
 				var musicBuffered = that.audio.buffered;
-
 				var musicLength = musicBuffered.length;
-
-				console.log("length=" + musicLength);
-				console.log("start="+ musicBuffered.start(0));
-				console.log("end=" + musicBuffered.end(0));
+				if(musicBuffered.length !== 0) {
+					var timeRage = musicBuffered.end(0)* 100/that.audio.duration ;
+					console.log(timeRage);
+					console.log("end="+musicBuffered.end(0));
+					console.log("duration="+that.audio.duration);
+				}
 				var duration = that.getMusicDuration();
-				console.log('进度=' + musicBuffered.end(0)/that.audio.duration * 100 + "%");
 				var currentTime = that.getMusicCurrentTime();
 				var timeStr = that.formatDate(duration,currentTime);
-				callback(duration,currentTime,timeStr);//这就是回调函数
+				callback(duration,currentTime,timeStr,timeRage);//这就是回调函数
 			});
 		},
 		formatDate: function(duration,currentTime){

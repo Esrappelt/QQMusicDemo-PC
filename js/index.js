@@ -338,13 +338,20 @@ $(function() {
 			});
 		});
 		//3.时间、进度条同步
-		player.musicTimeUpdate(function(duration,currentTime,timeStr){
+		player.musicTimeUpdate(function(duration,currentTime,timeStr,timeRage){
 			//同步时间
 			$(".play_mid_top_s_right").text(timeStr);
 			//同步进度条
 			var value = currentTime / duration * 100;
 			progress.setProgress(value);
 
+			//同步缓冲进度条
+
+			//获取同步的结构
+
+			var $timeRg = $(".play .play_mid .play_mid_top_bar .play_mid_top_buffer_line");
+			$timeRg.css('width', ""+(timeRage)+"%");
+			console.log($timeRg);
 			var lyricIndex = lyric.currentIndex(currentTime);
 			if(lyricIndex <= 0) {
 				return;

@@ -596,6 +596,14 @@ li {
 	width:0;
 	background: rgb(255,255,255,1);
 }
+.play .play_mid .play_mid_top_bar .play_mid_top_buffer_line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 2px;
+    width:0;
+    background: rgb(255,255,255,1);
+}
 .play .play_mid .play_mid_top_bar .play_mid_top_line .play_mid_top_dot {
 	position: absolute;
 	top: -4px;/*因为10-2 = 8  8/2 = 4*/
@@ -604,6 +612,7 @@ li {
 	width: 10px;
 	border-radius: 50%;
 	background: white;
+    z-index: 999;
 }
 
 .play .wrapper {
