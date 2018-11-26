@@ -91,9 +91,6 @@
 				var musicLength = musicBuffered.length;
 				if(musicBuffered.length !== 0) {
 					var timeRage = musicBuffered.end(0)* 100/that.audio.duration ;
-					console.log(timeRage);
-					console.log("end="+musicBuffered.end(0));
-					console.log("duration="+that.audio.duration);
 				}
 				var duration = that.getMusicDuration();
 				var currentTime = that.getMusicCurrentTime();

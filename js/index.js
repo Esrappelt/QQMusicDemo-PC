@@ -351,7 +351,6 @@ $(function() {
 
 			var $timeRg = $(".play .play_mid .play_mid_top_bar .play_mid_top_buffer_line");
 			$timeRg.css('width', ""+(timeRage)+"%");
-			console.log($timeRg);
 			var lyricIndex = lyric.currentIndex(currentTime);
 			if(lyricIndex <= 0) {
 				return;
